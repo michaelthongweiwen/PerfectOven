@@ -15,10 +15,13 @@ function updateGraph() {
     let damageOverTime = calculateDamageOverTime(attack, critChance, critDamage);
 
     let ctx = document.getElementById('damageChart').getContext('2d');
-    if (window.damageChart) {
+    
+    // Destroy the previous chart instance if it exists and is a Chart instance
+    if (window.damageChart instanceof Chart) {
         window.damageChart.destroy();
     }
 
+    // Create a new chart instance
     window.damageChart = new Chart(ctx, {
         type: 'line',
         data: {
