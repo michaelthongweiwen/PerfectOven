@@ -1,7 +1,7 @@
 function calculateDamageOverTime(attack, critChance, critDamage, duration = 60) {
     let damageOverTime = [];
     for (let t = 1; t <= duration; t++) {
-        let averageDamagePerHit = attack * ((1 - critChance / 100) + (critChance / 100) * (1 + critDamage / 100));
+        let averageDamagePerHit = attack * ((1 - critChance / 100) + (critChance / 100) * (critDamage / 100));
         damageOverTime.push(averageDamagePerHit * t);
     }
     return damageOverTime;
