@@ -3,8 +3,35 @@ body {
     padding: 20px;
 }
 
-form {
+.form-container {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
 }
 
 canvas {

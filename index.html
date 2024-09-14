@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfect Oven</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Perfect Oven</h1>
-    <form id="damage-form">
-        <label for="attack">Attack:</label>
-        <input type="number" id="attack" name="attack" value="1777"><br><br>
-        <label for="crit-chance">Crit Chance (%):</label>
-        <input type="number" id="crit-chance" name="crit-chance" value="15"><br><br>
-        <label for="crit-damage">Crit Damage (%):</label>
-        <input type="number" id="crit-damage" name="crit-damage" value="187.5"><br><br>
-        <button type="button" onclick="updateGraph()">Calculate</button>
-    </form>
+    <div class="form-container">
+        <!-- First input set -->
+        <div class="column">
+            <h2>Stats 1</h2>
+            <label for="attack1">Attack:</label>
+            <input type="number" id="attack1" name="attack1" value="0"><br><br>
+            <label for="crit-chance1">Crit Chance (%):</label>
+            <input type="number" id="crit-chance1" name="crit-chance1" value="0"><br><br>
+            <label for="crit-damage1">Crit Damage (%):</label>
+            <input type="number" id="crit-damage1" name="crit-damage1" value="0"><br><br>
+        </div>
 
+        <!-- Second input set -->
+        <div class="column">
+            <h2>Stats 2</h2>
+            <label for="attack2">Attack:</label>
+            <input type="number" id="attack2" name="attack2" value="0"><br><br>
+            <label for="crit-chance2">Crit Chance (%):</label>
+            <input type="number" id="crit-chance2" name="crit-chance2" value="0"><br><br>
+            <label for="crit-damage2">Crit Damage (%):</label>
+            <input type="number" id="crit-damage2" name="crit-damage2" value="0"><br><br>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button type="button" onclick="updateGraph()">Compare</button>
+    </div>
+    
     <canvas id="damageChart"></canvas>
 
     <script src="script.js"></script>
